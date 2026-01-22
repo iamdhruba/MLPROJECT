@@ -136,8 +136,10 @@ class ModelTrainer:
             predicted_result = best_model.predict(X_test)
             r2_square_value = r2_score(y_test, predicted_result)
             logging.info(f'The Probability r2 score is {r2_square_value}')
-            logging.info('Final model saved successfully')
+            logging.info('Final model saved successfully.')
             return r2_square_value, best_model
         
         except Exception as e:
             raise CustomException(e, sys)   
+        
+# Training model and find the best model 
