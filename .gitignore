@@ -1,10 +1,27 @@
-myenv
-artifacts
-*logs
+# Virtual environment
+myenv/
+
+# Artifacts
+artifacts/
+
+# Logs
+logs/
+*logs/
+
+# Python cache
 __pycache__/
+*.pyc
+*.pyo
+*.pyd
 
-
+# Jupyter notebooks
+*.ipynb
 .ipynb_checkpoints/
-.ipynb
 
+# IDE
+.vscode/
+.idea/
 
+# OS
+.DS_Store
+Thumbs.db
