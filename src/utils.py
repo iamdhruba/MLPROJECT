@@ -14,7 +14,7 @@ def save_object(file_path,obj):
         dir_path = os.path.dirname(file_path)
         os.makedirs(dir_path,exist_ok=True)
         with open(file_path,'wb') as file_obj:
-            dill.dump(obj,file_obj)
+            pickle.dump(obj,file_obj)
 
     except Exception as e:
         raise CustomException(e,sys)
@@ -32,7 +32,7 @@ def evaluate_models(X_train, y_train, X_test, y_test, models, param):
             gs.fit(X_train, y_train)
             
             #model training using best params
-            model.set_params(**gs.best_params__)
+            model.set_params(**gs.best_params_)
             model.fit(X_train,y_train)
 
             #prediction
